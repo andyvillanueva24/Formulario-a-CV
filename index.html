@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Formulario de Currículum Vitae</h1>
+    <form id="cv-form">
+        <!-- Nombre y Apellidos -->
+        <div class="form-group">
+            <label for="nombre">Nombre y Apellidos:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
+        </div>
+
+        <!-- Fecha de Nacimiento -->
+        <div class="form-group">
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="time" id="fecha-nacimiento" name="fecha-nacimiento" required>
+        </div>
+
+        <!-- Ocupación -->
+        <div class="form-group">
+            <label for="ocupacion">Ocupación:</label>
+            <input type="text" id="ocupacion" name="ocupacion" placeholder="Introduce tu ocupación" required>
+        </div>
+
+        <!-- Contacto -->
+        <div class="form-group">
+            <label for="contacto">Contacto (Teléfono/Email):</label>
+            <input type="text" id="contacto" name="contacto" placeholder="Introduce tu teléfono o correo electrónico" required>
+        </div>
+
+        <!-- Nacionalidad -->
+        <div class="form-group">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <select id="nacionalidad" name="nacionalidad">
+                <option value="peruana">Peruana</option>
+                <option value="mexicana">Mexicana</option>
+                <option value="argentina">Argentina</option>
+                <option value="chilena">Chilena</option>
+                <option value="colombiana">Colombiana</option>
+                <option value="otra">Otra</option>
+            </select>
+        </div>
+
+        <!-- Nivel de Inglés -->
+        <div class="form-group">
+            <label for="ingles">Nivel de Inglés:</label>
+            <input type="radio" id="basico" name="ingles" value="Básico">
+            <label for="basico">Básico</label>
+            <input type="radio" id="intermedio" name="ingles" value="Intermedio">
+            <label for="intermedio">Intermedio</label>
+            <input type="radio" id="avanzado" name="ingles" value="Avanzado">
+            <label for="avanzado">Avanzado</label>
+            <input type="radio" id="fluido" name="ingles" value="Fluido">
+            <label for="fluido">Fluido</label>
+        </div>
+
+        <!-- Lenguajes de Programación -->
+        <div class="form-group">
+            <label for="lenguajes">Lenguajes de Programación:</label>
+            <select id="lenguajes" name="lenguajes" multiple>
+                <option value="C++">C++</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+        </div>
+
+        <!-- Aptitudes -->
+        <div class="form-group">
+            <label for="aptitudes">Aptitudes:</label>
+            <input list="aptitudes-list" id="aptitudes" name="aptitudes">
+            <datalist id="aptitudes-list">
+                <option value="Trabajo en equipo">
+                <option value="Liderazgo">
+                <option value="Pensamiento crítico">
+                <option value="Resolución de problemas">
+            </datalist>
+        </div>
+
+        <!-- Habilidades -->
+        <div class="form-group checkbox-group">
+            <label>Habilidades:</label>
+            <input type="checkbox" id="comunicacion" name="habilidades" value="Comunicación efectiva">
+            <label for="comunicacion">Comunicación efectiva</label>
+
+            <input type="checkbox" id="gestion" name="habilidades" value="Gestión del tiempo">
+            <label for="gestion">Gestión del tiempo</label>
+
+            <input type="checkbox" id="creatividad" name="habilidades" value="Creatividad">
+            <label for="creatividad">Creatividad</label>
+
+            <input type="checkbox" id="adaptacion" name="habilidades" value="Adaptación al cambio">
+            <label for="adaptacion">Adaptación al cambio</label>
+        </div>
+
+        <!-- Perfil -->
+        <div class="form-group">
+            <label for="perfil">Perfil:</label>
+            <textarea id="perfil" name="perfil" rows="5" placeholder="Describe tu perfil profesional" required></textarea>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="form-group">
+            <button type="submit">Enviar Currículum</button>
+        </div>
+    </form>
+
+</body>
+</html>

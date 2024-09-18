@@ -112,6 +112,52 @@
             <button type="submit">Enviar Currículum</button>
         </div>
     </form>
+    <div id="cv-output">
+        <h2>Currículum Generado</h2>
+        <p><strong>Nombre y Apellidos:</strong> <span id="output-nombre"></span></p>
+        <p><strong>Fecha de Nacimiento:</strong> <span id="output-fecha"></span></p>
+        <p><strong>Ocupación:</strong> <span id="output-ocupacion"></span></p>
+        <p><strong>Contacto:</strong> <span id="output-contacto"></span></p>
+        <p><strong>Nacionalidad:</strong> <span id="output-nacionalidad"></span></p>
+        <p><strong>Nivel de Inglés:</strong> <span id="output-ingles"></span></p>
+        <p><strong>Lenguajes de Programación:</strong> <span id="output-lenguajes"></span></p>
+        <p><strong>Aptitudes:</strong> <span id="output-aptitudes"></span></p>
+        <p><strong>Habilidades:</strong> <span id="output-habilidades"></span></p>
+        <p><strong>Perfil:</strong> <span id="output-perfil"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('cv-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            // Capturar los datos ingresados
+            const nombre = document.getElementById('nombre').value;
+            const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
+            const ocupacion = document.getElementById('ocupacion').value;
+            const contacto = document.getElementById('contacto').value;
+            const nacionalidad = document.getElementById('nacionalidad').value;
+            const ingles = document.querySelector('input[name="ingles"]:checked').value;
+            const lenguajes = Array.from(document.getElementById('lenguajes').selectedOptions).map(option => option.value);
+            const aptitudes = document.getElementById('aptitudes').value;
+            const habilidades = Array.from(document.querySelectorAll('input[name="habilidades"]:checked')).map(option => option.value);
+            const perfil = document.getElementById('perfil').value;
+
+            // Mostrar los datos en el CV
+            document.getElementById('output-nombre').textContent = nombre;
+            document.getElementById('output-fecha').textContent = fechaNacimiento;
+            document.getElementById('output-ocupacion').textContent = ocupacion;
+            document.getElementById('output-contacto').textContent = contacto;
+            document.getElementById('output-nacionalidad').textContent = nacionalidad;
+            document.getElementById('output-ingles').textContent = ingles;
+            document.getElementById('output-lenguajes').textContent = lenguajes.join(', ');
+            document.getElementById('output-aptitudes').textContent = aptitudes;
+            document.getElementById('output-habilidades').textContent = habilidades.join(', ');
+            document.getElementById('output-perfil').textContent = perfil;
+
+            // Mostrar la sección del currículum generado
+            document.getElementById('cv-output').style.display = 'block';
+        });
+    </script>
 
 </body>
 </html>

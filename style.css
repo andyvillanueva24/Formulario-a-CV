@@ -90,3 +90,19 @@ button {
 button:hover {
     background-color: #3498db;
 }
+#cv-output {
+background-color: #ecf0f1;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px;
+display: none;
+}
+
+#cv-output h2 {
+color: #2c3e50;
+margin-bottom: 10px;
+}
+
+#cv-output p {
+margin: 5px 0;
+}
